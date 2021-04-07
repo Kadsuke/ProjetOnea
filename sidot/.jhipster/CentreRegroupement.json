@@ -1,0 +1,45 @@
+{
+  "name": "CentreRegroupement",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "responsable",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "centre",
+      "otherEntityRelationshipName": "centreRegroupement",
+      "relationshipName": "centre"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "directionRegionale",
+      "otherEntityRelationshipName": "centreRegroupement",
+      "relationshipName": "directionRegionale"
+    }
+  ],
+  "entityTableName": "centre_regroupement",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "organigrame"],
+  "databaseType": "sql",
+  "changelogDate": "20210407093812"
+}

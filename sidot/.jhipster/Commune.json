@@ -1,0 +1,41 @@
+{
+  "name": "Commune",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "localite",
+      "otherEntityRelationshipName": "commune",
+      "relationshipName": "localite"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "province",
+      "otherEntityRelationshipName": "commune",
+      "relationshipName": "province"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "typeCommune",
+      "otherEntityRelationshipName": "commune",
+      "relationshipName": "typeCommune"
+    }
+  ],
+  "entityTableName": "commune",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "geographie"],
+  "databaseType": "sql",
+  "changelogDate": "20210407094612"
+}

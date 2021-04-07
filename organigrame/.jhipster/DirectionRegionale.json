@@ -1,0 +1,41 @@
+{
+  "name": "DirectionRegionale",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "responsable",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "centreRegroupement",
+      "otherEntityRelationshipName": "directionRegionale",
+      "relationshipName": "centreRegroupement"
+    }
+  ],
+  "entityTableName": "direction_regionale",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "organigrame"],
+  "microserviceName": "organigrame",
+  "clientRootFolder": "organigrame",
+  "databaseType": "sql",
+  "changelogDate": "20210407094112"
+}

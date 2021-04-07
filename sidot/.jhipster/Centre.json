@@ -1,0 +1,45 @@
+{
+  "name": "Centre",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "responsable",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "site",
+      "otherEntityRelationshipName": "centre",
+      "relationshipName": "site"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "centreRegroupement",
+      "otherEntityRelationshipName": "centre",
+      "relationshipName": "centreRegroupement"
+    }
+  ],
+  "entityTableName": "centre",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "organigrame"],
+  "databaseType": "sql",
+  "changelogDate": "20210407094212"
+}

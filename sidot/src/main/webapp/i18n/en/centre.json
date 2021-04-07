@@ -1,0 +1,28 @@
+{
+  "sidotApp": {
+    "centre": {
+      "home": {
+        "title": "Centres",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Centre",
+        "createOrEditLabel": "Create or edit a Centre",
+        "notFound": "No Centres found"
+      },
+      "created": "A new Centre is created with identifier {{ param }}",
+      "updated": "A Centre is updated with identifier {{ param }}",
+      "deleted": "A Centre is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Centre {{ id }}?"
+      },
+      "detail": {
+        "title": "Centre"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "responsable": "Responsable",
+      "contact": "Contact",
+      "site": "Site",
+      "centreRegroupement": "Centre Regroupement"
+    }
+  }
+}

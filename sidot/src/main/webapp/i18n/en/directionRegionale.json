@@ -1,0 +1,27 @@
+{
+  "sidotApp": {
+    "directionRegionale": {
+      "home": {
+        "title": "Direction Regionales",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Direction Regionale",
+        "createOrEditLabel": "Create or edit a Direction Regionale",
+        "notFound": "No Direction Regionales found"
+      },
+      "created": "A new Direction Regionale is created with identifier {{ param }}",
+      "updated": "A Direction Regionale is updated with identifier {{ param }}",
+      "deleted": "A Direction Regionale is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Direction Regionale {{ id }}?"
+      },
+      "detail": {
+        "title": "Direction Regionale"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "responsable": "Responsable",
+      "contact": "Contact",
+      "centreRegroupement": "Centre Regroupement"
+    }
+  }
+}
