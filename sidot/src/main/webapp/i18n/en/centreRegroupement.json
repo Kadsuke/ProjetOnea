@@ -1,0 +1,28 @@
+{
+  "sidotApp": {
+    "centreRegroupement": {
+      "home": {
+        "title": "Centre Regroupements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Centre Regroupement",
+        "createOrEditLabel": "Create or edit a Centre Regroupement",
+        "notFound": "No Centre Regroupements found"
+      },
+      "created": "A new Centre Regroupement is created with identifier {{ param }}",
+      "updated": "A Centre Regroupement is updated with identifier {{ param }}",
+      "deleted": "A Centre Regroupement is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Centre Regroupement {{ id }}?"
+      },
+      "detail": {
+        "title": "Centre Regroupement"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "responsable": "Responsable",
+      "contact": "Contact",
+      "centre": "Centre",
+      "directionRegionale": "Direction Regionale"
+    }
+  }
+}

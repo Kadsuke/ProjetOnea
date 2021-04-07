@@ -1,0 +1,35 @@
+{
+  "name": "Section",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "section",
+      "relationshipName": "lot"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "secteur",
+      "otherEntityRelationshipName": "section",
+      "relationshipName": "secteur"
+    }
+  ],
+  "entityTableName": "section",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "geographie"],
+  "databaseType": "sql",
+  "changelogDate": "20210407095112"
+}

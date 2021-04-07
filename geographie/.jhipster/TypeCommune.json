@@ -1,0 +1,31 @@
+{
+  "name": "TypeCommune",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "commune",
+      "otherEntityRelationshipName": "typeCommune",
+      "relationshipName": "commune"
+    }
+  ],
+  "entityTableName": "type_commune",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "geographie"],
+  "microserviceName": "geographie",
+  "clientRootFolder": "geographie",
+  "databaseType": "sql",
+  "changelogDate": "20210407094012"
+}

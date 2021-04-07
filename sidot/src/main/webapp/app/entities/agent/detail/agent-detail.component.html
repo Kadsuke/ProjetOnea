@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="agent">
+      <h2 data-cy="agentDetailsHeading"><span jhiTranslate="sidotApp.agent.detail.title">Agent</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ agent.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="sidotApp.agent.nom">Nom</span></dt>
+        <dd>
+          <span>{{ agent.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="sidotApp.agent.numero">Numero</span></dt>
+        <dd>
+          <span>{{ agent.numero }}</span>
+        </dd>
+        <dt><span jhiTranslate="sidotApp.agent.role">Role</span></dt>
+        <dd>
+          <span>{{ agent.role }}</span>
+        </dd>
+        <dt><span jhiTranslate="sidotApp.agent.site">Site</span></dt>
+        <dd>
+          <div *ngIf="agent.site">
+            <a [routerLink]="['/site', agent.site?.id, 'view']">{{ agent.site?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="sidotApp.agent.site">Site</span></dt>
+        <dd>
+          <div *ngIf="agent.site">
+            <a [routerLink]="['/site', agent.site?.id, 'view']">{{ agent.site?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/agent', agent.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

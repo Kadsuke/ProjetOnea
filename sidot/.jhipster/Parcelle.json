@@ -1,0 +1,29 @@
+{
+  "name": "Parcelle",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "lot",
+      "otherEntityRelationshipName": "parcelle",
+      "relationshipName": "lot"
+    }
+  ],
+  "entityTableName": "parcelle",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "geographie"],
+  "databaseType": "sql",
+  "changelogDate": "20210407094112"
+}

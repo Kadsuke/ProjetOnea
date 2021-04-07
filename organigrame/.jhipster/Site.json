@@ -1,0 +1,53 @@
+{
+  "name": "Site",
+  "fields": [
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "responsable",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "agent",
+      "otherEntityRelationshipName": "site",
+      "relationshipName": "agent"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "centre",
+      "otherEntityRelationshipName": "site",
+      "relationshipName": "centre"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "agent",
+      "otherEntityRelationshipName": "site",
+      "relationshipName": "agent"
+    }
+  ],
+  "entityTableName": "site",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["sidot", "organigrame"],
+  "microserviceName": "organigrame",
+  "clientRootFolder": "organigrame",
+  "databaseType": "sql",
+  "changelogDate": "20210407093912"
+}

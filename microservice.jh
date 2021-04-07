@@ -1,0 +1,129 @@
+
+application {
+  config {
+    baseName sidot,
+    applicationType gateway,
+    packageName com.onea.sidot,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework angularX
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName geographie,
+    applicationType microservice,
+    packageName com.onea.referentiel,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+  }
+  entities Region, Province, TypeCommune, Commune, Localite, Secteur, Section, Lot, Parcelle
+}
+
+application {
+  config {
+    baseName organigrame,
+    applicationType microservice,
+    packageName com.sidot.gestioneau,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+  }
+  entities DirectionRegionale, CentreRegroupement, Centre, Site, Agent
+}
+
+entity TypeCommune{
+	libelle String required
+}
+entity Region{
+	libelle String required
+}
+entity Province{
+	libelle String required
+}
+entity Commune{
+	libelle String required
+}
+entity Localite{
+	libelle String required
+}
+entity Secteur{
+	libelle String required
+}
+entity Section{
+	libelle String required
+}
+entity Lot{
+	libelle String required
+}
+entity Parcelle{
+	libelle String required
+}
+entity DirectionRegionale{
+	libelle String required,
+    responsable String required,
+    contact String required
+}
+entity CentreRegroupement{
+	libelle String required,
+    responsable String required,
+    contact String required
+}
+entity Centre{
+	libelle String required,
+    responsable String required,
+    contact String required
+}
+entity Site{
+	libelle String required,
+    responsable String required,
+    contact String required
+}
+entity Agent{
+	nom String required,
+    numero String required,
+    role String required
+}
+relationship OneToMany {
+Region to Province
+}
+relationship OneToMany {
+Province to Commune
+}
+relationship OneToMany {
+TypeCommune to Commune
+}
+relationship OneToMany {
+Commune to Localite
+}
+relationship OneToMany {
+Localite to Secteur
+}
+relationship OneToMany {
+Secteur to Section
+}
+relationship OneToMany {
+Section to Lot
+}
+relationship OneToMany {
+Lot to Parcelle
+}
+relationship OneToMany {
+DirectionRegionale to CentreRegroupement
+}
+relationship OneToMany {
+CentreRegroupement to Centre
+}
+relationship OneToMany {
+Centre to Site
+}
+relationship OneToMany {
+Site to Agent
+}
+relationship ManyToOne {
+Agent to Site
+}
+service * with serviceClass
+dto * with mapstruct
+paginate * with pagination

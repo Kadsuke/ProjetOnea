@@ -1,0 +1,26 @@
+{
+  "sidotApp": {
+    "localite": {
+      "home": {
+        "title": "Localites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Localite",
+        "createOrEditLabel": "Create or edit a Localite",
+        "notFound": "No Localites found"
+      },
+      "created": "A new Localite is created with identifier {{ param }}",
+      "updated": "A Localite is updated with identifier {{ param }}",
+      "deleted": "A Localite is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Localite {{ id }}?"
+      },
+      "detail": {
+        "title": "Localite"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "secteur": "Secteur",
+      "commune": "Commune"
+    }
+  }
+}
